@@ -9,12 +9,16 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="{{ assets('css/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
         
     </head>
     <body>
-        <div id="app"></div>
-        <script src="{{ assets('js/app.js') }}"></script>
+        <div id="app">
+            <main-app></main-app>
+        </div>
+        <script src="{{ asset('js/app.js') }}"></script>
+        <!-- <script async="" src="http://localhost:8000/browser-sync/browser-sync-client.js?v=2.24.6"></script>
+ -->
     </body>
 </html>

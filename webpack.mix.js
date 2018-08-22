@@ -12,4 +12,20 @@ let mix = require('laravel-mix');
  */
 
 mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+   .sass('resources/assets/sass/app.scss', 'public/css')
+   .browserSync({
+   	proxy: '127.0.0.1:8000',
+   	port: '8000'
+   });
+   //.browserSync();
+// const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+// mix.webpackConfig({
+//   plugins: [
+//     new BrowserSyncPlugin({
+     
+//       host: 'localhost:3000',
+//       proxy: 'localhost:3000',
+//       files: ['resources/views/**/*.php', 'app/**/*.php', 'routes/**/*.php']
+//     })
+// ]
+// });
