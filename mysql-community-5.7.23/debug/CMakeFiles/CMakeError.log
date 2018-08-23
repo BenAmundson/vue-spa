@@ -1,0 +1,158 @@
+Performing C SOURCE FILE Test HAVE_C_SHIFT_OR_OPTIMIZATION_BUG failed with the following output:
+Change Dir: /home/ben/code/vue-spa/mysql-community-5.7.23/debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4b2bf/fast"
+make[2]: Entering directory '/home/ben/code/vue-spa/mysql-community-5.7.23/debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_4b2bf.dir/build.make CMakeFiles/cmTC_4b2bf.dir/build
+make[3]: Entering directory '/home/ben/code/vue-spa/mysql-community-5.7.23/debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4b2bf.dir/src.c.o
+/usr/bin/cc   -DHAVE_C_SHIFT_OR_OPTIMIZATION_BUG  -O3 -fexpensive-optimizations   -o CMakeFiles/cmTC_4b2bf.dir/src.c.o   -c /home/ben/code/vue-spa/mysql-community-5.7.23/debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_4b2bf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4b2bf.dir/link.txt --verbose=1
+/usr/bin/cc  -DHAVE_C_SHIFT_OR_OPTIMIZATION_BUG  -O3 -fexpensive-optimizations  -Wl,-Bsymbolic-functions -Wl,-z,relro  -rdynamic CMakeFiles/cmTC_4b2bf.dir/src.c.o  -o cmTC_4b2bf 
+make[3]: Leaving directory '/home/ben/code/vue-spa/mysql-community-5.7.23/debug/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/ben/code/vue-spa/mysql-community-5.7.23/debug/CMakeFiles/CMakeTmp'
+
+Return value: 1
+Source file was:
+
+  struct X
+  {
+    int i;
+    unsigned short s;
+  };
+
+  unsigned __attribute__((noinline)) f(struct X x)
+  {
+    return x.s | (x.i << 16);
+  }
+
+  int
+  main()
+  {
+    struct X x;
+    x.i = 0x00001234;
+    x.s = 0x5678;
+    unsigned y = f(x);
+    /* Succeed (return 0) if compiler have bug */
+    return y == 0x12345678 ? 1 : 0;
+  }
+
+Performing C++ SOURCE FILE Test HAVE_CXX_SHIFT_OR_OPTIMIZATION_BUG failed with the following output:
+Change Dir: /home/ben/code/vue-spa/mysql-community-5.7.23/debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5e023/fast"
+make[2]: Entering directory '/home/ben/code/vue-spa/mysql-community-5.7.23/debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_5e023.dir/build.make CMakeFiles/cmTC_5e023.dir/build
+make[3]: Entering directory '/home/ben/code/vue-spa/mysql-community-5.7.23/debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5e023.dir/src.cxx.o
+/usr/bin/c++    -DHAVE_CXX_SHIFT_OR_OPTIMIZATION_BUG  -O3 -fexpensive-optimizations   -o CMakeFiles/cmTC_5e023.dir/src.cxx.o -c /home/ben/code/vue-spa/mysql-community-5.7.23/debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_5e023
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5e023.dir/link.txt --verbose=1
+/usr/bin/c++   -DHAVE_CXX_SHIFT_OR_OPTIMIZATION_BUG  -O3 -fexpensive-optimizations  -Wl,-Bsymbolic-functions -Wl,-z,relro  -rdynamic CMakeFiles/cmTC_5e023.dir/src.cxx.o  -o cmTC_5e023 
+make[3]: Leaving directory '/home/ben/code/vue-spa/mysql-community-5.7.23/debug/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/ben/code/vue-spa/mysql-community-5.7.23/debug/CMakeFiles/CMakeTmp'
+
+Return value: 1
+Source file was:
+
+  struct X
+  {
+    int i;
+    unsigned short s;
+  };
+
+  unsigned __attribute__((noinline)) f(struct X x)
+  {
+    return x.s | (x.i << 16);
+  }
+
+  int
+  main()
+  {
+    struct X x;
+    x.i = 0x00001234;
+    x.s = 0x5678;
+    unsigned y = f(x);
+    /* Succeed (return 0) if compiler have bug */
+    return y == 0x12345678 ? 1 : 0;
+  }
+
+Performing C SOURCE FILE Test HAVE_C_FLOATING_POINT_FUSED_MADD failed with the following output:
+Change Dir: /home/ben/code/vue-spa/mysql-community-5.7.23/debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0aec5/fast"
+make[2]: Entering directory '/home/ben/code/vue-spa/mysql-community-5.7.23/debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_0aec5.dir/build.make CMakeFiles/cmTC_0aec5.dir/build
+make[3]: Entering directory '/home/ben/code/vue-spa/mysql-community-5.7.23/debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0aec5.dir/src.c.o
+/usr/bin/cc   -DHAVE_C_FLOATING_POINT_FUSED_MADD  -O3   -o CMakeFiles/cmTC_0aec5.dir/src.c.o   -c /home/ben/code/vue-spa/mysql-community-5.7.23/debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_0aec5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0aec5.dir/link.txt --verbose=1
+/usr/bin/cc  -DHAVE_C_FLOATING_POINT_FUSED_MADD  -O3  -Wl,-Bsymbolic-functions -Wl,-z,relro  -rdynamic CMakeFiles/cmTC_0aec5.dir/src.c.o  -o cmTC_0aec5 
+make[3]: Leaving directory '/home/ben/code/vue-spa/mysql-community-5.7.23/debug/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/ben/code/vue-spa/mysql-community-5.7.23/debug/CMakeFiles/CMakeTmp'
+
+Return value: 1
+Source file was:
+
+  int main (int argc, char **argv)
+  {
+    double n[21] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                     0, 0, 0, 1, 1, 1, 1, 1, 1, 1,1 };
+    double m= 0, s= 0;
+    int i;
+    for(i= 0; i < 21; i++)
+    {
+      double m_kminusone= m;
+      m= m_kminusone + (n[i] - m_kminusone) / (double) (i + 2);
+      s= s + (n[i] - m_kminusone) * (n[i] - m);
+    }
+    /*
+      s should now be either 5e 74 d1 45 17 5d 14 40 or
+      40 14 5d 17 45 d1 74 5e, depending on endianness. If the floating point
+      operations are optimized with fused multiply-add instructions, the least
+      significant byte is 5d instead of 5e.
+    */
+    return (*(unsigned char*)(&s) == 0x5e ||
+            *((unsigned char*)(&s) + 7) == 0x5e);
+  }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLOATING_POINT_FUSED_MADD failed with the following output:
+Change Dir: /home/ben/code/vue-spa/mysql-community-5.7.23/debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_987d9/fast"
+make[2]: Entering directory '/home/ben/code/vue-spa/mysql-community-5.7.23/debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_987d9.dir/build.make CMakeFiles/cmTC_987d9.dir/build
+make[3]: Entering directory '/home/ben/code/vue-spa/mysql-community-5.7.23/debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_987d9.dir/src.cxx.o
+/usr/bin/c++    -DHAVE_CXX_FLOATING_POINT_FUSED_MADD  -O3   -o CMakeFiles/cmTC_987d9.dir/src.cxx.o -c /home/ben/code/vue-spa/mysql-community-5.7.23/debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_987d9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_987d9.dir/link.txt --verbose=1
+/usr/bin/c++   -DHAVE_CXX_FLOATING_POINT_FUSED_MADD  -O3  -Wl,-Bsymbolic-functions -Wl,-z,relro  -rdynamic CMakeFiles/cmTC_987d9.dir/src.cxx.o  -o cmTC_987d9 
+make[3]: Leaving directory '/home/ben/code/vue-spa/mysql-community-5.7.23/debug/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/ben/code/vue-spa/mysql-community-5.7.23/debug/CMakeFiles/CMakeTmp'
+
+Return value: 1
+Source file was:
+
+  int main (int argc, char **argv)
+  {
+    double n[21] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                     0, 0, 0, 1, 1, 1, 1, 1, 1, 1,1 };
+    double m= 0, s= 0;
+    int i;
+    for(i= 0; i < 21; i++)
+    {
+      double m_kminusone= m;
+      m= m_kminusone + (n[i] - m_kminusone) / (double) (i + 2);
+      s= s + (n[i] - m_kminusone) * (n[i] - m);
+    }
+    /*
+      s should now be either 5e 74 d1 45 17 5d 14 40 or
+      40 14 5d 17 45 d1 74 5e, depending on endianness. If the floating point
+      operations are optimized with fused multiply-add instructions, the least
+      significant byte is 5d instead of 5e.
+    */
+    return (*(unsigned char*)(&s) == 0x5e ||
+            *((unsigned char*)(&s) + 7) == 0x5e);
+  }
